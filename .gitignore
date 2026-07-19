@@ -1,8 +1,8 @@
 node_modules/
-js/app.js
 js/app.js.map
 .DS_Store
 .env
 .env.local
 *.log
 dist/
+# app.js is committed so Vercel can serve it without a build step
