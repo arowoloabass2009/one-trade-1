@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Trade — Trade. Invest. Grow. | Premium Forex Investment Platform</title>
+  <meta name="description" content="One Trade is a world-class forex investment platform. Trade global currency markets, invest with confidence, and grow your wealth with expert-driven strategies." />
+  <meta name="keywords" content="forex trading, investment platform, One Trade, currency trading, forex investment, trading signals" />
+  <meta property="og:title" content="One Trade — Trade. Invest. Grow." />
+  <meta property="og:description" content="World-class forex investment platform. Trade. Invest. Grow." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-inner">
+    <a href="#home" class="navbar-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="One Trade Home">
+      <div class="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 18 50 A 32 32 0 0 1 50 18" stroke="#2563eb" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M 50 82 A 32 32 0 0 1 82 50" stroke="#f59e0b" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <polygon points="83,43 90,52 76,54" fill="#f59e0b"/>
+          <rect x="33" y="52" width="8" height="18" rx="1.5" fill="#22d3ee"/>
+          <line x1="37" y1="46" x2="37" y2="52" stroke="#22d3ee" stroke-width="2"/>
+          <line x1="37" y1="70" x2="37" y2="76" stroke="#22d3ee" stroke-width="2"/>
+          <rect x="44" y="44" width="8" height="24" rx="1.5" fill="#06b6d4"/>
+          <line x1="48" y1="38" x2="48" y2="44" stroke="#06b6d4" stroke-width="2"/>
+          <line x1="48" y1="68" x2="48" y2="74" stroke="#06b6d4" stroke-width="2"/>
+          <rect x="55" y="38" width="8" height="28" rx="1.5" fill="#0891b2"/>
+          <line x1="59" y1="32" x2="59" y2="38" stroke="#0891b2" stroke-width="2"/>
+          <line x1="59" y1="66" x2="59" y2="72" stroke="#0891b2" stroke-width="2"/>
+          <text x="18" y="40" font-family="Arial Black,Arial" font-size="26" font-weight="900" fill="#f59e0b">1</text>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">One Trade</span>
+        <span class="logo-tagline">Trade · Invest · Grow</span>
+      </div>
+    </a>
+
+    <ul class="navbar-nav" id="navLinks" role="list">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">What We Do</a></li>
+      <li><a href="#why-us" class="nav-link">Why Us</a></li>
+      <li><a href="#blog" class="nav-link">Blog</a></li>
+      <li><a href="#download" class="nav-link">App</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="navbar-actions" id="navActions">
+      <div class="live-indicator" aria-label="Markets live">
+        <span class="pulse-dot"></span>
+        LIVE
+      </div>
+      <button class="nav-admin-btn" id="openAdminGateBtn" aria-label="Admin access">
+        🔐 Admin
+      </button>
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     SPACER — pushes content below the fixed navbar
+══════════════════════════════════════════════ -->
+<div style="height:var(--nav-h);" aria-hidden="true"></div>
+
+<!-- Forex Ticker Tape — sits flush below navbar -->
+<div class="ticker-wrap" id="tickerWrap" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════════ -->
+<section class="hero" id="home" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <!-- Globe / Planet horizon — matches splash image -->
+    <div class="hero-globe"></div>
+    <!-- Cyan light shaft from horizon center -->
+    <div class="hero-light-shaft"></div>
+    <!-- SVG candlestick silhouettes rising from globe -->
+    <div class="hero-candles" aria-hidden="true">
+      <svg viewBox="0 0 1400 280" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="candleGrad1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.05"/>
+          </linearGradient>
+          <linearGradient id="candleGrad2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0099cc" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#0099cc" stop-opacity="0.03"/>
+          </linearGradient>
+          <linearGradient id="candleGrad3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.02"/>
+          </linearGradient>
+          <filter id="candleGlow">
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <!-- Distant small candles (left) -->
+        <rect x="60"  y="230" width="4" height="50"  fill="url(#candleGrad3)" rx="1"/>
+        <line x1="62" y1="218" x2="62" y2="230" stroke="#22d3ee" stroke-width="1" opacity=".2"/>
+        <rect x="90"  y="210" width="4" height="70"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="120" y="240" width="4" height="40"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="150" y="220" width="5" height="60"  fill="url(#candleGrad2)" rx="1"/>
+        <line x1="152" y1="205" x2="152" y2="220" stroke="#0099cc" stroke-width="1" opacity=".25"/>
+        <rect x="185" y="245" width="4" height="35"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="215" y="200" width="6" height="80"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="250" y="225" width="5" height="55"  fill="url(#candleGrad2)" rx="1"/>
+        <!-- Mid-range candles -->
+        <rect x="300" y="190" width="8"  height="90"  fill="url(#candleGrad2)" rx="1" filter="url(#candleGlow)"/>
+        <line x1="304" y1="172" x2="304" y2="190" stroke="#0099cc" stroke-width="1.5" opacity=".3"/>
+        <rect x="325" y="210" width="7"  height="70"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="350" y="170" width="9"  height="110" fill="url(#candleGrad1)" rx="1" filter="url(#candleGlow)"/>
+        <line x1="354" y1="150" x2="354" y2="170" stroke="#00d4ff" stroke-width="2" opacity=".4"/>
+        <rect x="378" y="200" width="7"  height="80"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="400" y="185" width="8"  height="95"  fill="url(#candleGrad1)" rx="1" filter="url(#candleGlow)"/>
+        <!-- Center feature candles — tallest, brightest -->
+        <rect x="460" y="140" width="12" height="140" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <line x1="466" y1="118" x2="466" y2="140" stroke="#00d4ff" stroke-width="2.5" opacity=".5"/>
+        <line x1="466" y1="280" x2="466" y2="295" stroke="#00d4ff" stroke-width="2.5" opacity=".3"/>
+        <rect x="488" y="160" width="10" height="120" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <rect x="510" y="120" width="14" height="160" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <line x1="517" y1="98"  x2="517" y2="120" stroke="#00d4ff" stroke-width="3" opacity=".6"/>
+        <rect x="540" y="145" width="11" height="135" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <rect x="565" y="105" width="13" height="175" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <line x1="571" y1="82"  x2="571" y2="105" stroke="#00d4ff" stroke-width="3" opacity=".65"/>
+        <rect x="594" y="130" width="12" height="150" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <rect x="620" y="115" width="13" height="165" fill="url(#candleGrad1)" rx="2" filter="url(#candleGlow)"/>
+        <!-- Right mid candles -->
+        <rect x="660" y="175" width="9"  height="105" fill="url(#candleGrad2)" rx="1" filter="url(#candleGlow)"/>
+        <rect x="685" y="195" width="8"  height="85"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="710" y="165" width="10" height="115" fill="url(#candleGrad1)" rx="1" filter="url(#candleGlow)"/>
+        <line x1="715" y1="145" x2="715" y2="165" stroke="#00d4ff" stroke-width="2" opacity=".4"/>
+        <rect x="738" y="185" width="8"  height="95"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="760" y="200" width="7"  height="80"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="782" y="175" width="9"  height="105" fill="url(#candleGrad2)" rx="1" filter="url(#candleGlow)"/>
+        <!-- Distant right candles -->
+        <rect x="850" y="215" width="6"  height="65"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="880" y="230" width="5"  height="50"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="910" y="205" width="6"  height="75"  fill="url(#candleGrad2)" rx="1"/>
+        <rect x="940" y="220" width="5"  height="60"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="970" y="240" width="4"  height="40"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1000" y="210" width="6" height="70"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1030" y="235" width="4" height="45"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1060" y="220" width="5" height="60"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1090" y="240" width="4" height="40"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1120" y="215" width="5" height="65"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1150" y="235" width="4" height="45"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1180" y="225" width="5" height="55"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1210" y="245" width="4" height="35"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1240" y="228" width="4" height="52"  fill="url(#candleGrad3)" rx="1"/>
+        <rect x="1270" y="242" width="3" height="38"  fill="url(#candleGrad3)" rx="1" opacity=".6"/>
+        <rect x="1300" y="255" width="3" height="25"  fill="url(#candleGrad3)" rx="1" opacity=".4"/>
+        <rect x="1330" y="260" width="3" height="20"  fill="url(#candleGrad3)" rx="1" opacity=".3"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Left content -->
+        <div class="hero-left">
+          <div class="hero-badge reveal reveal-delay-1" aria-label="Platform badge">
+            <span class="pulse-dot"></span>
+            World-Class Forex Investment Platform
+          </div>
+
+          <h1 class="hero-title reveal reveal-delay-2">
+            Unlock the Power<br />of <span class="highlight">Forex Trading</span><br />with Confidence
+          </h1>
+
+          <p class="hero-subtitle reveal reveal-delay-3">
+            Trade. Invest. Grow — Your Financial Future Starts Here.
+          </p>
+
+          <p class="hero-desc reveal reveal-delay-3">
+            One Trade is a premium forex investment platform built for serious traders and smart investors. 
+            Access real-time market intelligence, expert-curated signals, and a community-driven ecosystem 
+            designed to multiply your wealth in global currency markets.
+          </p>
+
+          <div class="hero-cta reveal reveal-delay-4">
+            <button class="btn btn-gold btn-lg" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})">
+              📲 Get the App
+            </button>
+            <button class="btn btn-ghost btn-lg" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+              Discover More →
+            </button>
+          </div>
+
+          <div class="hero-stats reveal reveal-delay-5">
+            <div class="stat-item">
+              <div class="stat-number" data-counter="50000" data-suffix="+" aria-label="50,000+ Active Traders">0</div>
+              <div class="stat-label">Active Traders</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-number" data-counter="98" data-suffix="%" aria-label="98% Success Rate">0</div>
+              <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-number" data-counter="180" data-suffix="+" aria-label="180+ Countries">0</div>
+              <div class="stat-label">Countries</div>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <div class="stat-number" data-prefix="$" data-counter="2" data-suffix="B+" aria-label="$2B+ Volume">0</div>
+              <div class="stat-label">Trade Volume</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Chart visual -->
+        <div class="hero-visual reveal-right">
+          <div class="hero-mini-card" aria-hidden="true">
+            <div class="mini-card-icon">💹</div>
+            <div class="mini-card-label">EUR/USD Live</div>
+            <div class="mini-card-value">+2.34%</div>
+          </div>
+
+          <div class="hero-chart-card" role="img" aria-label="Live forex chart preview">
+            <div class="chart-header">
+              <div>
+                <div class="chart-pair">GBP/USD</div>
+                <div style="font-size:.72rem;color:var(--text-muted);margin-top:2px;">London Session</div>
+              </div>
+              <div class="chart-price-wrap">
+                <span class="chart-price" id="livePrice">1.2734</span>
+                <span class="chart-change" id="liveChange">▲ +0.42%</span>
+              </div>
+            </div>
+
+            <!-- Live-style SVG candlestick chart -->
+            <svg class="chart-svg" viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" id="heroChartSvg">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- Grid lines -->
+              <line x1="0" y1="40" x2="420" y2="40" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+              <line x1="0" y1="80" x2="420" y2="80" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+              <line x1="0" y1="120" x2="420" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+              <!-- Area fill -->
+              <path d="M0,120 L40,100 L80,90 L120,95 L160,75 L200,60 L240,50 L280,55 L320,40 L360,35 L420,30 L420,160 L0,160 Z" fill="url(#areaGrad)"/>
+              <!-- Trend line -->
+              <path d="M0,120 L40,100 L80,90 L120,95 L160,75 L200,60 L240,50 L280,55 L320,40 L360,35 L420,30" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Live dot -->
+              <circle cx="420" cy="30" r="5" fill="#f59e0b" opacity=".9">
+                <animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+
+            <div class="chart-metrics" role="list" aria-label="Chart metrics">
+              <div class="metric-item" role="listitem">
+                <div class="metric-label">Open</div>
+                <div class="metric-value">1.2698</div>
+              </div>
+              <div class="metric-item" role="listitem">
+                <div class="metric-label">High</div>
+                <div class="metric-value" style="color:#4ade80;">1.2749</div>
+              </div>
+              <div class="metric-item" role="listitem">
+                <div class="metric-label">Low</div>
+                <div class="metric-value" style="color:#f87171;">1.2681</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-mini-card" aria-hidden="true">
+            <div class="mini-card-label">Portfolio</div>
+            <div class="mini-card-value">+$4,830</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     ABOUT / VISION SECTION
+══════════════════════════════════════════════ -->
+<section class="about-section section" id="about" aria-labelledby="aboutTitle">
+  <div class="container">
+    <div class="about-inner">
+      <!-- Visual / Logo display -->
+      <div class="about-visual reveal-left">
+        <div class="about-logo-display" role="img" aria-label="One Trade Brand">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" width="85%" height="85%" aria-hidden="true">
+            <!-- Outer ring - blue -->
+            <circle cx="150" cy="150" r="120" stroke="#1a3a6e" stroke-width="3" fill="none" opacity="0.4"/>
+            <!-- Blue arc -->
+            <path d="M 60 150 A 90 90 0 0 1 150 60" stroke="#2563eb" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <!-- Gold arc with arrow -->
+            <path d="M 150 240 A 90 90 0 0 1 240 150" stroke="#f59e0b" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <polygon points="242,138 256,152 230,158" fill="#f59e0b"/>
+            <!-- Candles -->
+            <rect x="105" y="155" width="22" height="55" rx="3" fill="#22d3ee"/>
+            <line x1="116" y1="143" x2="116" y2="155" stroke="#22d3ee" stroke-width="3"/>
+            <line x1="116" y1="210" x2="116" y2="222" stroke="#22d3ee" stroke-width="3"/>
+            <rect x="135" y="137" width="22" height="65" rx="3" fill="#06b6d4"/>
+            <line x1="146" y1="124" x2="146" y2="137" stroke="#06b6d4" stroke-width="3"/>
+            <line x1="146" y1="202" x2="146" y2="215" stroke="#06b6d4" stroke-width="3"/>
+            <rect x="165" y="120" width="22" height="75" rx="3" fill="#0891b2"/>
+            <line x1="176" y1="107" x2="176" y2="120" stroke="#0891b2" stroke-width="3"/>
+            <line x1="176" y1="195" x2="176" y2="208" stroke="#0891b2" stroke-width="3"/>
+            <!-- "1" numeral -->
+            <text x="68" y="132" font-family="Arial Black,Arial" font-size="72" font-weight="900" fill="#f59e0b" opacity=".9">1</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="about-content reveal-right">
+        <div class="section-label">🎯 Our Vision &amp; Mission</div>
+        <h2 class="section-title" id="aboutTitle">
+          Built for Traders Who <span class="gold-gradient-text">Think Bigger</span>
+        </h2>
+        <p class="about-lead">
+          One Trade was founded on a single belief: that every person, regardless of background, deserves 
+          access to world-class forex investment tools. We exist to democratize financial markets, making 
+          sophisticated trading accessible, transparent, and profitable.
+        </p>
+        <p class="about-lead">
+          Our platform combines cutting-edge algorithmic analysis, real-time market intelligence, and a 
+          community of elite traders to deliver consistent, measurable results for our investors.
+        </p>
+
+        <div class="about-pillars" role="list">
+          <div class="pillar-item reveal reveal-delay-1" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">🎯</div>
+            <div class="pillar-text">
+              <h4>Our Vision</h4>
+              <p>To become the most trusted and innovative forex investment platform, empowering millions globally to achieve financial freedom through intelligent trading.</p>
+            </div>
+          </div>
+          <div class="pillar-item reveal reveal-delay-2" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">🚀</div>
+            <div class="pillar-text">
+              <h4>Our Mission</h4>
+              <p>To deliver world-class trading education, technology, and investment strategies that enable every trader to navigate global markets with confidence and precision.</p>
+            </div>
+          </div>
+          <div class="pillar-item reveal reveal-delay-3" role="listitem">
+            <div class="pillar-icon" aria-hidden="true">💎</div>
+            <div class="pillar-text">
+              <h4>Core Values</h4>
+              <p>Transparency. Integrity. Excellence. Innovation. We hold these principles at the heart of every trade, every strategy, and every relationship we build.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     STATS SECTION
+══════════════════════════════════════════════ -->
+<section class="stats-section section-sm" aria-label="Platform statistics">
+  <div class="container">
+    <div class="stats-grid" role="list">
+      <div class="stat-card reveal reveal-delay-1" role="listitem">
+        <div class="stat-card-number" data-counter="50000" data-suffix="+" aria-label="50,000 plus active traders">0</div>
+        <div class="stat-card-label">Active Traders</div>
+        <div class="stat-card-desc">Traders globally using One Trade daily</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2" role="listitem">
+        <div class="stat-card-number" data-counter="98" data-suffix="%" aria-label="98 percent win rate">0</div>
+        <div class="stat-card-label">Win Rate Average</div>
+        <div class="stat-card-desc">Consistent performance across all strategies</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3" role="listitem">
+        <div class="stat-card-number" data-prefix="$" data-counter="2" data-suffix="B+" aria-label="2 billion in managed volume">0</div>
+        <div class="stat-card-label">Volume Managed</div>
+        <div class="stat-card-desc">Total trading volume on our platform</div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4" role="listitem">
+        <div class="stat-card-number" data-counter="180" data-suffix="+" aria-label="180 plus countries served">0</div>
+        <div class="stat-card-label">Countries Served</div>
+        <div class="stat-card-desc">Global reach across every continent</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES / WHAT WE DO
+══════════════════════════════════════════════ -->
+<section class="services-section section" id="services" aria-labelledby="servicesTitle">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">⚡ What We Do</div>
+      <h2 class="section-title" id="servicesTitle">
+        Everything You Need to <span class="gold-gradient-text">Trade &amp; Grow</span>
+      </h2>
+      <p class="section-subtitle" style="margin:0 auto 0;">
+        One Trade offers a comprehensive suite of forex investment services — from expert signals 
+        and education to managed accounts and advanced analytics. We have one purpose: your profit.
+      </p>
+    </div>
+
+    <div class="services-grid" role="list">
+      <div class="service-card reveal reveal-delay-1" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">📊</div>
+        <h3 class="service-title">Forex Trading Signals</h3>
+        <p class="service-desc">Real-time, high-accuracy trading signals generated by our AI-powered analytics engine and validated by expert traders. Know exactly when to enter and exit any trade.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">Real-Time</span>
+          <span class="badge badge-blue">AI-Powered</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">💼</div>
+        <h3 class="service-title">Managed Investment Accounts</h3>
+        <p class="service-desc">Let our seasoned portfolio managers handle your forex investments. We deliver consistent monthly returns with clearly defined risk parameters and full transparency.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">Managed</span>
+          <span class="badge badge-cyan">Transparent</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">🎓</div>
+        <h3 class="service-title">Trading Education &amp; Mentorship</h3>
+        <p class="service-desc">From beginner forex fundamentals to advanced institutional trading strategies — our structured curriculum and 1-on-1 mentorship program fast-tracks your trading mastery.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">Beginner–Pro</span>
+          <span class="badge badge-blue">Mentorship</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">🤖</div>
+        <h3 class="service-title">Automated Trading Bots</h3>
+        <p class="service-desc">Deploy battle-tested trading algorithms that execute your strategy 24/7 without emotion. Our bots analyze multiple currency pairs simultaneously and act in milliseconds.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">24/7</span>
+          <span class="badge badge-blue">Algorithmic</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">📈</div>
+        <h3 class="service-title">Market Intelligence &amp; Analytics</h3>
+        <p class="service-desc">Deep-dive into macroeconomic reports, technical analysis, and sentiment data. Our intelligence dashboard gives you the edge professional traders have always had.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">Data-Driven</span>
+          <span class="badge badge-cyan">Analytics</span>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3" role="listitem">
+        <div class="service-icon-wrap" aria-hidden="true">🌐</div>
+        <h3 class="service-title">Global Community &amp; Copy Trading</h3>
+        <p class="service-desc">Join a thriving community of elite traders. Copy the trades of top performers automatically, share strategies, and learn from the best minds in forex across the globe.</p>
+        <div class="service-tags">
+          <span class="badge badge-gold">Community</span>
+          <span class="badge badge-blue">Copy Trade</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     WHY CHOOSE US
+══════════════════════════════════════════════ -->
+<section class="why-section section" id="why-us" aria-labelledby="whyTitle">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-content reveal-left">
+        <div class="section-label">🏆 Why One Trade</div>
+        <h2 class="section-title" id="whyTitle">
+          The Edge Serious<br /><span class="gold-gradient-text">Traders Choose</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom:0;">
+          We don't just offer a platform — we offer a complete ecosystem built around your growth, 
+          security, and long-term financial success in global forex markets.
+        </p>
+      </div>
+
+      <div class="why-features reveal-right">
+        <div class="feature-row">
+          <div class="feature-row-icon" aria-hidden="true">🔒</div>
+          <div class="feature-row-body">
+            <h4>Bank-Grade Security</h4>
+            <p>256-bit SSL encryption, two-factor authentication, and cold storage for maximum fund protection. Your capital is always safe with One Trade.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row-icon" aria-hidden="true">⚡</div>
+          <div class="feature-row-body">
+            <h4>Millisecond Trade Execution</h4>
+            <p>Our ultra-low latency infrastructure ensures your trades are executed at the exact price you see — no slippage, no delays. Pure speed.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row-icon" aria-hidden="true">🎯</div>
+          <div class="feature-row-body">
+            <h4>Expert-Validated Strategies</h4>
+            <p>Every signal, strategy, and recommendation goes through rigorous backtesting and forward-testing by our team of professional analysts before reaching you.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row-icon" aria-hidden="true">📞</div>
+          <div class="feature-row-body">
+            <h4>24/7 Dedicated Support</h4>
+            <p>Our support team is available around the clock via live chat, email, and voice. Because markets never sleep, and neither do we.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-row-icon" aria-hidden="true">📱</div>
+          <div class="feature-row-body">
+            <h4>One App. All Markets.</h4>
+            <p>Trade 50+ currency pairs, access live signals, manage your portfolio, and engage with the community — all from one elegant, powerful mobile app.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     CORE VALUES SECTION
+══════════════════════════════════════════════ -->
+<section class="section" id="core-values" style="background:linear-gradient(180deg,#071526 0%,#050d1a 100%);" aria-labelledby="valuesTitle">
+  <div class="container text-center">
+    <div class="section-label">💎 Core Values</div>
+    <h2 class="section-title" id="valuesTitle">
+      Principles That Drive <span class="gold-gradient-text">Every Decision</span>
+    </h2>
+    <p class="section-subtitle" style="margin:0 auto 56px;">
+      Our values are not aspirations — they are the operating system behind every trade, 
+      every decision, and every interaction at One Trade.
+    </p>
+
+    <div class="grid-4" role="list">
+      <div class="card reveal reveal-delay-1" role="listitem">
+        <div class="card-icon" aria-hidden="true">🌟</div>
+        <h3 class="card-title">Transparency</h3>
+        <p class="card-text">We show you everything — open trades, risk levels, fees, and performance. No hidden agendas. No fine print surprises.</p>
+      </div>
+      <div class="card reveal reveal-delay-2" role="listitem">
+        <div class="card-icon" aria-hidden="true">⚖️</div>
+        <h3 class="card-title">Integrity</h3>
+        <p class="card-text">We say what we do and do what we say. Our word is our bond, and our reputation is built one honest trade at a time.</p>
+      </div>
+      <div class="card reveal reveal-delay-3" role="listitem">
+        <div class="card-icon" aria-hidden="true">🚀</div>
+        <h3 class="card-title">Excellence</h3>
+        <p class="card-text">We set the highest standard in everything we deliver — from signal accuracy to user experience. Mediocrity has no place here.</p>
+      </div>
+      <div class="card reveal reveal-delay-4" role="listitem">
+        <div class="card-icon" aria-hidden="true">💡</div>
+        <h3 class="card-title">Innovation</h3>
+        <p class="card-text">We constantly push the boundaries of what a forex platform can be — integrating AI, blockchain transparency, and next-gen analytics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     APP DOWNLOAD SECTION
+══════════════════════════════════════════════ -->
+<section class="download-section section" id="download" aria-labelledby="downloadTitle">
+  <div class="container">
+    <div class="download-inner">
+      <div class="download-content reveal-left">
+        <div class="section-label">📲 One Trade App</div>
+        <h2 class="section-title" id="downloadTitle">
+          Your Trading Command Centre<br /><span class="gold-gradient-text">In Your Pocket</span>
+        </h2>
+        <p class="section-subtitle" style="margin-bottom:32px;">
+          The One Trade app puts the full power of global forex markets in your hands. 
+          Real-time signals, live charts, instant execution, portfolio tracking, community insights 
+          — everything you need, beautifully designed for iOS and Android.
+        </p>
+
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:36px;" role="list">
+          <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-body);" role="listitem">
+            <span style="color:var(--gold-bright);font-size:1rem;" aria-hidden="true">✓</span>
+            Live forex charts with 50+ currency pairs
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-body);" role="listitem">
+            <span style="color:var(--gold-bright);font-size:1rem;" aria-hidden="true">✓</span>
+            Push notifications for premium trade signals
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-body);" role="listitem">
+            <span style="color:var(--gold-bright);font-size:1rem;" aria-hidden="true">✓</span>
+            One-tap copy trading from top performers
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-body);" role="listitem">
+            <span style="color:var(--gold-bright);font-size:1rem;" aria-hidden="true">✓</span>
+            Automated bot deployment &amp; management
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--text-body);" role="listitem">
+            <span style="color:var(--gold-bright);font-size:1rem;" aria-hidden="true">✓</span>
+            Built-in market news &amp; economic calendar
+          </li>
+        </ul>
+
+        <div class="app-store-btns">
+          <button class="store-btn" onclick="window._toast && window._toast.show('iOS App launching soon! Stay tuned.','info')" aria-label="Download on App Store">
+            <span class="store-icon" aria-hidden="true">🍎</span>
+            <div class="store-text">
+              <div class="store-sub">Download on the</div>
+              <div class="store-name">App Store</div>
+            </div>
+          </button>
+          <button class="store-btn" onclick="window._toast && window._toast.show('Android App launching soon! Stay tuned.','info')" aria-label="Get it on Google Play">
+            <span class="store-icon" aria-hidden="true">▶</span>
+            <div class="store-text">
+              <div class="store-sub">Get it on</div>
+              <div class="store-name">Google Play</div>
+            </div>
+          </button>
+        </div>
+
+        <p style="font-size:.78rem;color:var(--text-muted);margin-top:16px;">
+          🔒 Free to download. Available globally. Rated 4.9★ by traders worldwide.
+        </p>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="download-phone reveal-right">
+        <div class="phone-mockup" role="img" aria-label="One Trade mobile app preview">
+          <div class="phone-screen">
+            <div class="phone-status-bar">
+              <span>9:41 AM</span>
+              <span>●●● WiFi 100%</span>
+            </div>
+            <div class="phone-app-content">
+              <div class="phone-logo-row">
+                <svg viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
+                  <path d="M8,20 A12,12 0 0,1 20,8" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <path d="M20,32 A12,12 0 0,1 32,20" stroke="#f59e0b" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <polygon points="33,16 37,21 29,22" fill="#f59e0b"/>
+                  <rect x="13" y="21" width="4" height="9" rx="1" fill="#22d3ee"/>
+                  <rect x="18" y="18" width="4" height="11" rx="1" fill="#06b6d4"/>
+                  <rect x="23" y="15" width="4" height="13" rx="1" fill="#0891b2"/>
+                </svg>
+                <span>One Trade</span>
+              </div>
+
+              <div class="phone-chart-mini">
+                <svg viewBox="0 0 180 60" aria-hidden="true">
+                  <path d="M0,50 L30,40 L60,35 L90,38 L120,25 L150,18 L180,12" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  <path d="M0,50 L30,40 L60,35 L90,38 L120,25 L150,18 L180,12 L180,60 L0,60 Z" fill="rgba(245,158,11,.08)"/>
+                </svg>
+              </div>
+
+              <div class="phone-currency-list" role="list">
+                <div class="phone-currency-item" role="listitem">
+                  <span class="p-pair">EUR/USD</span>
+                  <span class="p-price">1.0845</span>
+                  <span class="p-up">▲ 0.31%</span>
+                </div>
+                <div class="phone-currency-item" role="listitem">
+                  <span class="p-pair">GBP/USD</span>
+                  <span class="p-price">1.2734</span>
+                  <span class="p-up">▲ 0.42%</span>
+                </div>
+                <div class="phone-currency-item" role="listitem">
+                  <span class="p-pair">USD/JPY</span>
+                  <span class="p-price">149.82</span>
+                  <span class="p-down">▼ 0.18%</span>
+                </div>
+                <div class="phone-currency-item" role="listitem">
+                  <span class="p-pair">XAU/USD</span>
+                  <span class="p-price">2,641</span>
+                  <span class="p-up">▲ 0.75%</span>
+                </div>
+              </div>
+
+              <button style="width:100%;padding:10px;background:linear-gradient(135deg,#d4a017,#f59e0b);border:none;border-radius:10px;font-size:.72rem;font-weight:800;color:var(--deep-blue);margin-top:auto;cursor:pointer;">
+                📊 View All Markets
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════════ -->
+<section class="testimonials-section section" id="testimonials" aria-labelledby="testimonialsTitle">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">⭐ Trader Reviews</div>
+      <h2 class="section-title" id="testimonialsTitle">
+        What Our <span class="gold-gradient-text">Traders Say</span>
+      </h2>
+      <p class="section-subtitle" style="margin:0 auto 0;">
+        Don't take our word for it. Here's what thousands of successful traders say about their experience with One Trade.
+      </p>
+    </div>
+
+    <div class="testimonials-grid" role="list">
+      <div class="testimonial-card reveal reveal-delay-1" role="listitem">
+        <div class="stars" aria-label="5 star rating">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">One Trade completely transformed my approach to forex. The signals are incredibly accurate, and the education platform gave me the confidence to trade with real money. My portfolio is up 340% in 8 months.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">AO</div>
+          <div>
+            <div class="author-name">Adewale Okonkwo</div>
+            <div class="author-role">Professional Trader · Lagos, Nigeria</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2" role="listitem">
+        <div class="stars" aria-label="5 star rating">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">The managed account service is phenomenal. I handed over my capital to their expert team, and they've delivered consistent 15-20% monthly returns. This is truly a world-class investment platform.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">SK</div>
+          <div>
+            <div class="author-name">Sarah Kamau</div>
+            <div class="author-role">Investor · Nairobi, Kenya</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-3" role="listitem">
+        <div class="stars" aria-label="5 star rating">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <span class="quote-icon" aria-hidden="true">"</span>
+        <p class="testimonial-text">I've tried 6 different forex platforms. One Trade is in a league of its own. The UI, the community, the signals, the support — everything is just excellent. I recommend it to every serious trader I know.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">MA</div>
+          <div>
+            <div class="author-name">Mohammed Al-Rashid</div>
+            <div class="author-role">Forex Analyst · Dubai, UAE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     BLOG SECTION
+══════════════════════════════════════════════ -->
+<section class="blog-section section" id="blog" aria-labelledby="blogTitle">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <div class="section-label">📰 Insights &amp; News</div>
+        <h2 class="section-title" id="blogTitle">
+          One Trade <span class="gold-gradient-text">Blog</span>
+        </h2>
+        <p class="section-subtitle" style="margin:0;">
+          Expert analysis, market insights, trading education, and investment strategies — 
+          curated by our team of professional traders.
+        </p>
+      </div>
+      <div class="blog-filter" role="group" aria-label="Blog categories">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="analysis">Market Analysis</button>
+        <button class="filter-btn" data-cat="education">Education</button>
+        <button class="filter-btn" data-cat="strategy">Strategy</button>
+        <button class="filter-btn" data-cat="news">News</button>
+      </div>
+    </div>
+
+    <div class="blog-grid" id="blogGrid" role="list" aria-live="polite" aria-label="Blog posts">
+      <!-- Blog posts injected by TypeScript -->
+      <div class="empty-state" style="grid-column:1/-1;" aria-busy="true">
+        <div class="empty-state-icon" aria-hidden="true">📰</div>
+        <p class="empty-state-text">Loading posts...</p>
+      </div>
+    </div>
+
+    <div class="blog-load-more">
+      <button class="btn btn-outline-gold" id="loadMoreBtn" aria-label="Load more blog posts">
+        Load More Articles
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Post Modal -->
+<div class="post-overlay" id="postOverlay" role="dialog" aria-modal="true" aria-labelledby="postModalTitle">
+  <div class="post-modal" id="postModal">
+    <div class="post-modal-hero" id="postModalHero" aria-hidden="true">📊</div>
+    <button class="post-modal-close" id="postModalClose" aria-label="Close post">✕</button>
+    <div class="post-modal-body">
+      <div class="post-modal-meta" id="postModalMeta"></div>
+      <h2 class="post-modal-title" id="postModalTitle"></h2>
+      <div class="post-modal-content" id="postModalContent"></div>
+
+      <!-- Comments -->
+      <div class="comments-section" aria-label="Comments">
+        <h3 class="comments-title">
+          💬 <span id="commentsCountLabel">Comments</span>
+        </h3>
+
+        <form class="comment-form" id="commentForm" novalidate aria-label="Leave a comment">
+          <div class="comment-input-row">
+            <div class="form-group">
+              <label class="form-label" for="commentName">Your Name *</label>
+              <input type="text" class="form-control" id="commentName" name="name" placeholder="John Doe" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="commentEmail">Email (optional)</label>
+              <input type="email" class="form-control" id="commentEmail" name="email" placeholder="john@example.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="commentText">Your Comment *</label>
+            <textarea class="form-control" id="commentText" name="comment" rows="3" placeholder="Share your thoughts on this article..." required aria-required="true"></textarea>
+          </div>
+          <div class="comment-submit">
+            <button type="submit" class="btn btn-gold btn-sm" id="commentSubmitBtn">
+              Post Comment
+            </button>
+          </div>
+        </form>
+
+        <div class="comments-list" id="commentsList" aria-live="polite" aria-label="Comments list">
+          <!-- Comments injected by TypeScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     CTA SECTION
+══════════════════════════════════════════════ -->
+<section class="cta-section section" aria-labelledby="ctaTitle">
+  <div class="container">
+    <div class="cta-content">
+      <div class="section-label" style="margin:0 auto 20px;">🚀 Start Today</div>
+      <h2 class="cta-title" id="ctaTitle">
+        Ready to Trade With<br /><span class="gold-gradient-text">the World's Best?</span>
+      </h2>
+      <p class="cta-subtitle">
+        Join 50,000+ traders who trust One Trade to navigate global forex markets. 
+        Download the app, access expert signals, and start growing your wealth today.
+      </p>
+      <div class="cta-actions">
+        <button class="btn btn-gold btn-lg" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})" aria-label="Download the One Trade app">
+          📲 Download the App
+        </button>
+        <button class="btn btn-ghost btn-lg" onclick="document.getElementById('blog').scrollIntoView({behavior:'smooth'})" aria-label="Read the blog">
+          📰 Read Our Blog
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT / FAQ SECTION
+══════════════════════════════════════════════ -->
+<section class="section" id="contact" style="background:#071526;" aria-labelledby="contactTitle">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-label">📬 Get In Touch</div>
+      <h2 class="section-title" id="contactTitle">
+        We're Here to <span class="gold-gradient-text">Help You Succeed</span>
+      </h2>
+      <p class="section-subtitle" style="margin:0 auto 56px;">
+        Have questions about One Trade? Our expert support team is online 24/7 to assist you.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon" aria-hidden="true">📧</div>
+        <h3 class="card-title">Email Support</h3>
+        <p class="card-text">Reach our expert support team via email. We respond within 2 hours during business hours.</p>
+        <a href="mailto:support@onetrade.app" style="display:inline-block;margin-top:14px;font-size:.85rem;font-weight:700;color:var(--gold-bright);">support@onetrade.app →</a>
+      </div>
+
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon" aria-hidden="true">💬</div>
+        <h3 class="card-title">Live Chat</h3>
+        <p class="card-text">Connect instantly with our trading support specialists via live chat. Available 24/7.</p>
+        <button onclick="window._toast && window._toast.show('Live chat will be available in the app. Download now!','info')" style="display:inline-block;margin-top:14px;font-size:.85rem;font-weight:700;color:var(--gold-bright);background:none;border:none;cursor:pointer;padding:0;">Start Live Chat →</button>
+      </div>
+
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon" aria-hidden="true">📞</div>
+        <h3 class="card-title">Phone Support</h3>
+        <p class="card-text">Speak directly to one of our trading specialists for urgent investment queries.</p>
+        <a href="tel:+2349000000000" style="display:inline-block;margin-top:14px;font-size:.85rem;font-weight:700;color:var(--gold-bright);">+234 900 000 0000 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo" aria-label="Site footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="One Trade Home">
+            <svg viewBox="0 0 50 50" width="44" height="44" aria-hidden="true">
+              <path d="M9,25 A16,16 0 0,1 25,9" stroke="#2563eb" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M25,41 A16,16 0 0,1 41,25" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <polygon points="42,20 46,26 38,27" fill="#f59e0b"/>
+              <rect x="16" y="26" width="4" height="10" rx="1" fill="#22d3ee"/>
+              <rect x="22" y="22" width="4" height="13" rx="1" fill="#06b6d4"/>
+              <rect x="28" y="18" width="4" height="16" rx="1" fill="#0891b2"/>
+              <text x="8" y="20" font-family="Arial Black" font-size="14" font-weight="900" fill="#f59e0b">1</text>
+            </svg>
+            <div>
+              <div class="footer-logo-name">One Trade</div>
+              <div class="footer-logo-tagline">Trade · Invest · Grow</div>
+            </div>
+          </a>
+
+          <p class="footer-brand-desc">
+            One Trade is a world-class forex investment platform empowering traders globally 
+            to achieve financial freedom through intelligent, data-driven trading strategies.
+          </p>
+
+          <div class="footer-socials" role="list" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Twitter/X" role="listitem">𝕏</a>
+            <a href="#" class="social-link" aria-label="Telegram" role="listitem">✈</a>
+            <a href="#" class="social-link" aria-label="Instagram" role="listitem">📸</a>
+            <a href="#" class="social-link" aria-label="YouTube" role="listitem">▶</a>
+            <a href="#" class="social-link" aria-label="WhatsApp" role="listitem">💬</a>
+          </div>
+        </div>
+
+        <!-- Platform -->
+        <div class="footer-col">
+          <div class="footer-col-title">Platform</div>
+          <ul class="footer-links" role="list">
+            <li role="listitem"><a href="#services">Forex Signals</a></li>
+            <li role="listitem"><a href="#services">Managed Accounts</a></li>
+            <li role="listitem"><a href="#services">Trading Bots</a></li>
+            <li role="listitem"><a href="#services">Copy Trading</a></li>
+            <li role="listitem"><a href="#download">Mobile App</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links" role="list">
+            <li role="listitem"><a href="#about">About One Trade</a></li>
+            <li role="listitem"><a href="#core-values">Core Values</a></li>
+            <li role="listitem"><a href="#blog">Blog &amp; Insights</a></li>
+            <li role="listitem"><a href="#testimonials">Success Stories</a></li>
+            <li role="listitem"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Admin / Resources -->
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul class="footer-links" role="list">
+            <li role="listitem"><a href="#blog">Trading Education</a></li>
+            <li role="listitem"><a href="#blog">Market Analysis</a></li>
+            <li role="listitem"><button onclick="document.getElementById('openAdminGateBtn').click()">Admin Portal</button></li>
+            <li role="listitem"><a href="#contact">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-copy">
+          <div class="newsletter-title">Stay Ahead of the Market</div>
+          <div class="newsletter-sub">Get free weekly trading insights, signals, and market updates.</div>
+        </div>
+        <form class="newsletter-form" id="newsletterForm" novalidate aria-label="Newsletter subscription">
+          <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address" required />
+          <button type="submit" class="btn btn-gold" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">
+          © <span id="footerYear">2024</span> <span>One Trade</span>. All rights reserved. Built with precision for traders worldwide.
+        </p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Risk Disclosure</a>
+          <a href="#">Cookie Policy</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-disclaimer">
+    <div class="container">
+      <p class="disclaimer-text">
+        <strong>Risk Disclaimer:</strong> Forex trading and investment carry a high level of risk and may not be suitable for all investors. 
+        The value of currency can decrease as well as increase. Past performance is not indicative of future results. 
+        One Trade does not guarantee returns. Always trade with money you can afford to lose and seek independent financial advice if necessary.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     ADMIN GATE (Passcode modal)
+══════════════════════════════════════════════ -->
+<div class="admin-gate" id="adminGate" role="dialog" aria-modal="true" aria-labelledby="adminGateTitle" style="display:none;">
+  <div class="admin-gate-card">
+    <button class="admin-gate-close" id="adminGateClose" aria-label="Close admin gate">✕</button>
+    <div class="admin-gate-icon" aria-hidden="true">🔐</div>
+    <h2 class="admin-gate-title" id="adminGateTitle">Admin Access</h2>
+    <p class="admin-gate-sub">Enter your administrator passcode to continue</p>
+
+    <div class="admin-passcode-wrap">
+      <input type="password" class="admin-passcode-input" id="adminPasscodeInput" placeholder="Enter passcode" maxlength="20" aria-label="Admin passcode" autocomplete="current-password" />
+      <button class="toggle-pw-btn" id="togglePasscode" aria-label="Toggle passcode visibility">👁</button>
+    </div>
+
+    <p class="admin-error-msg" id="adminErrorMsg" role="alert"></p>
+    <button class="btn btn-gold" style="width:100%;" id="adminLoginBtn" aria-label="Login to admin panel">
+      Access Admin Panel →
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     ADMIN PANEL
+══════════════════════════════════════════════ -->
+<div class="admin-panel" id="adminPanel" role="main" aria-label="Admin panel">
+  <div class="admin-topbar">
+    <div class="admin-brand" aria-label="One Trade Admin">
+      <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+        <path d="M6,16 A10,10 0 0,1 16,6" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M16,26 A10,10 0 0,1 26,16" stroke="#f59e0b" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <polygon points="27,12 30,17 24,17" fill="#f59e0b"/>
+        <rect x="10" y="17" width="3" height="7" rx="1" fill="#22d3ee"/>
+        <rect x="14" y="14" width="3" height="9" rx="1" fill="#06b6d4"/>
+        <rect x="18" y="11" width="3" height="11" rx="1" fill="#0891b2"/>
+      </svg>
+      One Trade Admin
+    </div>
+    <div class="admin-topbar-right">
+      <span class="admin-badge">ADMINISTRATOR</span>
+      <button class="admin-logout-btn" id="adminLogoutBtn" aria-label="Logout from admin panel">
+        🚪 Logout
+      </button>
+    </div>
+  </div>
+
+  <div class="admin-body">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" role="navigation" aria-label="Admin navigation">
+      <div class="sidebar-section-label">Content</div>
+      <button class="sidebar-btn active" data-tab="dashboard" aria-label="Dashboard">
+        <span class="sidebar-btn-icon" aria-hidden="true">📊</span> Dashboard
+      </button>
+      <button class="sidebar-btn" data-tab="new-post" aria-label="New post">
+        <span class="sidebar-btn-icon" aria-hidden="true">✏️</span> New Post
+      </button>
+      <button class="sidebar-btn" data-tab="manage-posts" aria-label="Manage posts">
+        <span class="sidebar-btn-icon" aria-hidden="true">📋</span> Manage Posts
+      </button>
+      <button class="sidebar-btn" data-tab="comments" aria-label="Manage comments">
+        <span class="sidebar-btn-icon" aria-hidden="true">💬</span> Comments
+      </button>
+
+      <div class="sidebar-section-label" style="margin-top:12px;">Settings</div>
+      <button class="sidebar-btn" data-tab="site-info" aria-label="Site information">
+        <span class="sidebar-btn-icon" aria-hidden="true">⚙️</span> Site Info
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      <!-- Dashboard Tab -->
+      <div class="admin-tab active" id="tab-dashboard" role="region" aria-label="Dashboard">
+        <div class="admin-tab-header">
+          <h2 class="admin-tab-title">📊 Dashboard</h2>
+          <span class="badge badge-gold">Admin View</span>
+        </div>
+        <div class="admin-stats-row" role="list">
+          <div class="admin-stat-card" role="listitem">
+            <div class="admin-stat-label">Total Posts</div>
+            <div class="admin-stat-num" id="adminStatPosts">0</div>
+          </div>
+          <div class="admin-stat-card" role="listitem">
+            <div class="admin-stat-label">Total Comments</div>
+            <div class="admin-stat-num" id="adminStatComments">0</div>
+          </div>
+          <div class="admin-stat-card" role="listitem">
+            <div class="admin-stat-label">Published</div>
+            <div class="admin-stat-num" id="adminStatPublished">0</div>
+          </div>
+          <div class="admin-stat-card" role="listitem">
+            <div class="admin-stat-label">Drafts</div>
+            <div class="admin-stat-num" id="adminStatDrafts">0</div>
+          </div>
+        </div>
+        <div id="recentPostsWrap"></div>
+      </div>
+
+      <!-- New Post Tab -->
+      <div class="admin-tab" id="tab-new-post" role="region" aria-label="Create new post">
+        <div class="admin-tab-header">
+          <h2 class="admin-tab-title" id="editorTitle">✏️ New Post</h2>
+        </div>
+        <div class="post-editor">
+          <input type="hidden" id="editPostId" />
+          <div class="post-editor-title">📝 Post Details</div>
+          <div class="form-group">
+            <label class="form-label" for="postTitle">Post Title *</label>
+            <input type="text" class="form-control" id="postTitle" placeholder="Enter a compelling post title..." required aria-required="true" />
+          </div>
+          <div class="editor-row">
+            <div class="form-group">
+              <label class="form-label" for="postCategory">Category *</label>
+              <select class="form-control" id="postCategory" required aria-required="true">
+                <option value="">Select category</option>
+                <option value="analysis">Market Analysis</option>
+                <option value="education">Education</option>
+                <option value="strategy">Strategy</option>
+                <option value="news">News</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="postEmoji">Icon / Emoji</label>
+              <input type="text" class="form-control" id="postEmoji" placeholder="e.g. 📊" maxlength="4" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="postExcerpt">Excerpt / Summary *</label>
+            <input type="text" class="form-control" id="postExcerpt" placeholder="A brief summary shown on the blog cards..." required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="postContent">Full Post Content *</label>
+            <textarea class="form-control" id="postContent" rows="12" placeholder="Write your full article here. Use double line breaks to separate paragraphs. Use ###Heading### to add headings." required aria-required="true"></textarea>
+          </div>
+          <div class="editor-row">
+            <div class="form-group">
+              <label class="form-label" for="postAuthor">Author Name *</label>
+              <input type="text" class="form-control" id="postAuthor" placeholder="e.g. One Trade Editorial" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="postStatus">Status</label>
+              <select class="form-control" id="postStatus">
+                <option value="published">Published</option>
+                <option value="draft">Draft</option>
+              </select>
+            </div>
+          </div>
+          <div class="editor-actions">
+            <button class="btn btn-ghost btn-sm" id="cancelEditBtn" style="display:none;" aria-label="Cancel editing">Cancel</button>
+            <button class="btn btn-gold" id="savePostBtn" aria-label="Save post">
+              💾 Save &amp; Publish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manage Posts Tab -->
+      <div class="admin-tab" id="tab-manage-posts" role="region" aria-label="Manage posts">
+        <div class="admin-tab-header">
+          <h2 class="admin-tab-title">📋 Manage Posts</h2>
+          <button class="btn btn-gold btn-sm" id="newPostShortcut" aria-label="Create new post">+ New Post</button>
+        </div>
+        <div class="posts-table-wrap" role="region" aria-label="Posts table">
+          <table class="posts-table" aria-label="Blog posts">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Category</th>
+                <th scope="col">Author</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="postsTableBody">
+              <tr>
+                <td colspan="6">
+                  <div class="empty-state">
+                    <div class="empty-state-icon" aria-hidden="true">📰</div>
+                    <p class="empty-state-text">No posts yet. Create your first post above.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Comments Tab -->
+      <div class="admin-tab" id="tab-comments" role="region" aria-label="Manage comments">
+        <div class="admin-tab-header">
+          <h2 class="admin-tab-title">💬 All Comments</h2>
+        </div>
+        <div id="adminCommentsList" aria-live="polite" aria-label="Comments list"></div>
+      </div>
+
+      <!-- Site Info Tab -->
+      <div class="admin-tab" id="tab-site-info" role="region" aria-label="Site information">
+        <div class="admin-tab-header">
+          <h2 class="admin-tab-title">⚙️ Site Info</h2>
+        </div>
+        <div class="card">
+          <div style="display:grid;gap:16px;">
+            <div><span style="color:var(--gold-bright);font-weight:700;">Platform:</span> <span>One Trade Web v1.1</span></div>
+            <div><span style="color:var(--gold-bright);font-weight:700;">Stack:</span> <span>TypeScript, HTML5, CSS3 — No frameworks</span></div>
+            <div><span style="color:var(--gold-bright);font-weight:700;">Database:</span> <span>Supabase (PostgreSQL) + localStorage fallback</span></div>
+            <div><span style="color:var(--gold-bright);font-weight:700;">Admin:</span> <span>Passcode protected — credentials confidential</span></div>
+            <div><span style="color:var(--gold-bright);font-weight:700;">Realtime:</span> <span>Supabase Realtime (live comment updates)</span></div>
+            <div><span style="color:var(--gold-bright);font-weight:700;">Version:</span> <span>1.1.0</span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Supabase CDN (must load before app.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<!-- One Trade Supabase Services -->
+<script src="js/supabase.js"></script>
+<!-- One Trade App -->
+<script src="js/app.js"></script>
+</body>
+</html>

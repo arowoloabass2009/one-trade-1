@@ -1,0 +1,26 @@
+{
+  "server": {
+    "baseDir": "./"
+  },
+  "port": 3001,
+  "open": "local",
+  "startPath": "/index.html",
+  "notify": false,
+  "ui": false,
+  "logLevel": "info",
+  "logPrefix": "OneTrade",
+  "logConnections": false,
+  "logFileChanges": true,
+  "ghostMode": {
+    "clicks": false,
+    "forms": false,
+    "scroll": false
+  },
+  "reloadDelay": 300,
+  "reloadDebounce": 500,
+  "files": [
+    "*.html",
+    "css/**/*.css",
+    "js/app.js"
+  ]
+}

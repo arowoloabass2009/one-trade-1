@@ -1,0 +1,270 @@
+/* ============================================================
+   ONE TRADE — Footer
+   ============================================================ */
+
+.site-footer {
+  background: linear-gradient(180deg, #040b17 0%, #020810 100%);
+  border-top: 1px solid rgba(0,212,255,.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,158,11,.4), transparent);
+}
+
+/* ─── Footer Top ─── */
+.footer-top {
+  padding: 72px 0 56px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column */
+.footer-brand {}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.footer-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  background: var(--grad-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-logo-tagline {
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+}
+
+.footer-brand-desc {
+  font-size: .88rem;
+  color: rgba(255,255,255,.45);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 340px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: rgba(255,255,255,.55);
+  transition: all var(--t-fast);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: rgba(245,158,11,.12);
+  border-color: rgba(245,158,11,.3);
+  color: var(--gold-bright);
+  transform: translateY(-3px);
+}
+
+/* Footer nav columns */
+.footer-col {}
+
+.footer-col-title {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(245,158,11,.15);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li a,
+.footer-links li button {
+  font-size: .875rem;
+  color: rgba(255,255,255,.45);
+  text-decoration: none;
+  transition: color var(--t-fast);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links li a:hover,
+.footer-links li button:hover {
+  color: var(--gold-bright);
+}
+
+.footer-links li a::before,
+.footer-links li button::before {
+  content: '›';
+  color: var(--gold-bright);
+  font-size: .9rem;
+  opacity: .6;
+}
+
+/* ─── Footer Newsletter ─── */
+.footer-newsletter {
+  padding: 40px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.newsletter-copy {}
+
+.newsletter-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.newsletter-sub {
+  font-size: .88rem;
+  color: rgba(255,255,255,.45);
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  flex: 1;
+  min-width: 260px;
+  padding: 13px 18px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50px;
+  color: var(--white);
+  font-size: .9rem;
+  outline: none;
+  transition: border-color var(--t-fast);
+}
+
+.newsletter-input:focus {
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 0 3px rgba(245,158,11,.12);
+}
+
+.newsletter-input::placeholder { color: rgba(255,255,255,.3); }
+
+/* ─── Footer Bottom ─── */
+.footer-bottom {
+  padding: 24px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: .8rem;
+  color: rgba(255,255,255,.3);
+}
+
+.footer-copy span {
+  color: var(--gold-bright);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-size: .78rem;
+  color: rgba(255,255,255,.3);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.footer-legal a:hover { color: var(--gold-bright); }
+
+/* ─── Disclaimer strip ─── */
+.footer-disclaimer {
+  background: rgba(255,255,255,.02);
+  border-top: 1px solid rgba(255,255,255,.04);
+  padding: 16px 0;
+}
+
+.disclaimer-text {
+  font-size: .72rem;
+  color: rgba(255,255,255,.22);
+  text-align: center;
+  line-height: 1.65;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+  .footer-legal { justify-content: center; }
+  .newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .newsletter-input { min-width: 100%; }
+}
