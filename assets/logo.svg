@@ -1,122 +1,171 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" role="img" aria-label="One Trade — Trade. Invest. Grow.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" role="img" aria-label="One Trade — Trade. Invest. Grow.">
   <defs>
-    <!-- Gold gradient for T arrow and text -->
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Gold gradient — T shape and arrow -->
+    <linearGradient id="lg-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fcd34d"/>
+      <stop offset="40%"  stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <!-- Deep gold for 3D shading -->
+    <linearGradient id="lg-gold-dark" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%"   stop-color="#f59e0b"/>
-      <stop offset="50%"  stop-color="#fbbf24"/>
-      <stop offset="100%" stop-color="#d4a017"/>
+      <stop offset="100%" stop-color="#78350f"/>
     </linearGradient>
-    <!-- Blue gradient for "One" text -->
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#2563eb"/>
+    <!-- Blue orbit arc gradient -->
+    <linearGradient id="lg-blue-arc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e40af"/>
+      <stop offset="50%"  stop-color="#2563eb"/>
       <stop offset="100%" stop-color="#38bdf8"/>
     </linearGradient>
-    <!-- Blue-to-gold for "Trade" text -->
-    <linearGradient id="tradeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#60a5fa"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <!-- Gold orbit arc gradient -->
+    <linearGradient id="lg-gold-arc" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fcd34d"/>
+      <stop offset="60%"  stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#92400e"/>
     </linearGradient>
-    <!-- Cyan gradient for tagline -->
-    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-    </linearGradient>
-    <!-- Blue arc gradient -->
-    <linearGradient id="arcBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#1d4ed8"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
-    </linearGradient>
-    <!-- Gold arc gradient -->
-    <linearGradient id="arcGold" x1="0%" y1="100%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#d4a017"/>
-      <stop offset="100%" stop-color="#fbbf24"/>
-    </linearGradient>
-    <!-- Candle teal gradient -->
-    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#22d3ee"/>
+    <!-- Teal candle gradient -->
+    <linearGradient id="lg-teal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#5eead4"/>
+      <stop offset="50%"  stop-color="#22d3ee"/>
       <stop offset="100%" stop-color="#0891b2"/>
     </linearGradient>
-    <!-- Drop shadow filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+    <!-- "One" text: blue gradient left to right -->
+    <linearGradient id="lg-one-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <!-- "Trade" text: gold -->
+    <linearGradient id="lg-trade-text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fcd34d"/>
+      <stop offset="50%"  stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <!-- Tagline cyan -->
+    <linearGradient id="lg-tagline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <!-- Glow filter for icon -->
+    <filter id="glow-gold" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <!-- Clip circle for icon -->
+    <clipPath id="icon-clip">
+      <circle cx="88" cy="90" r="72"/>
+    </clipPath>
   </defs>
 
-  <!-- ═══ ICON MARK (left side, centered at 78,80) ═══ -->
+  <!-- ══════════════════════════════════════
+       ICON — centered at (88, 90), radius 72
+  ══════════════════════════════════════ -->
 
-  <!-- Outer subtle ring -->
-  <circle cx="78" cy="80" r="64" fill="none" stroke="rgba(37,99,235,0.15)" stroke-width="1.5"/>
+  <!-- Outer faint ring -->
+  <circle cx="88" cy="90" r="70" fill="none"
+          stroke="rgba(37,99,235,0.18)" stroke-width="1.5"/>
 
-  <!-- Blue arc — top-left sweep -->
-  <path d="M 26 80 A 52 52 0 0 1 78 28"
-        stroke="url(#arcBlue)" stroke-width="8"
-        fill="none" stroke-linecap="round"
-        filter="url(#glow)"/>
+  <!-- ── BLUE ORBIT ARC — top-left going clockwise to upper-right ── -->
+  <!-- Main thick blue arc (outer) -->
+  <path d="M 28 90 A 60 60 0 0 1 88 30"
+        stroke="url(#lg-blue-arc)" stroke-width="12"
+        fill="none" stroke-linecap="round" filter="url(#glow-gold)"/>
+  <!-- Thin inner highlight on blue arc -->
+  <path d="M 31 90 A 57 57 0 0 1 88 33"
+        stroke="rgba(147,197,253,0.4)" stroke-width="3"
+        fill="none" stroke-linecap="round"/>
 
-  <!-- Blue arc continuation — upper right -->
-  <path d="M 78 28 A 52 52 0 0 1 118 58"
-        stroke="#1e40af" stroke-width="6"
-        fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Blue arc continues upper right, narrowing -->
+  <path d="M 88 30 A 60 60 0 0 1 140 62"
+        stroke="#1e3a8a" stroke-width="8"
+        fill="none" stroke-linecap="round" opacity="0.7"/>
 
-  <!-- Gold arc — bottom sweep with arrow -->
-  <path d="M 38 108 A 52 52 0 0 0 118 68"
-        stroke="url(#arcGold)" stroke-width="8"
-        fill="none" stroke-linecap="round"
-        filter="url(#goldGlow)"/>
+  <!-- ── GOLD ORBIT ARC — bottom sweep with arrow ── -->
+  <!-- Main gold arc (bottom, going right) -->
+  <path d="M 42 122 A 60 60 0 0 0 140 72"
+        stroke="url(#lg-gold-arc)" stroke-width="10"
+        fill="none" stroke-linecap="round" filter="url(#glow-gold)"/>
+  <!-- Thin highlight on gold arc -->
+  <path d="M 44 118 A 57 57 0 0 0 137 72"
+        stroke="rgba(253,211,77,0.35)" stroke-width="2.5"
+        fill="none" stroke-linecap="round"/>
 
-  <!-- Gold arrow head at end of gold arc (pointing upper-right) -->
-  <polygon points="122,58 138,68 118,76"
-           fill="url(#goldGrad)"
-           filter="url(#goldGlow)"/>
+  <!-- Gold arrowhead at tip of gold arc (pointing upper-right ~45°) -->
+  <g filter="url(#glow-gold)">
+    <polygon points="145,60  162,74  138,80"
+             fill="url(#lg-gold)"/>
+    <!-- Arrow highlight -->
+    <polygon points="145,60  155,68  148,64"
+             fill="rgba(255,220,100,0.6)"/>
+  </g>
 
-  <!-- ── Candlestick 1 (left, shorter) ── -->
-  <rect x="52" y="74" width="9" height="26" rx="1.5" fill="url(#tealGrad)"/>
-  <line x1="56.5" y1="68" x2="56.5" y2="74" stroke="#22d3ee" stroke-width="2"/>
-  <line x1="56.5" y1="100" x2="56.5" y2="106" stroke="#22d3ee" stroke-width="2"/>
+  <!-- ── GOLD "T" LETTERFORM (large, centered in arc) ── -->
+  <g filter="url(#glow-gold)">
+    <!-- T crossbar (horizontal top) -->
+    <rect x="60" y="36" width="54" height="14" rx="3"
+          fill="url(#lg-gold)"/>
+    <!-- T crossbar dark side for 3D -->
+    <rect x="60" y="46" width="54" height="4" rx="0"
+          fill="url(#lg-gold-dark)" opacity="0.5"/>
+    <!-- T vertical stem -->
+    <rect x="78" y="36" width="20" height="58" rx="3"
+          fill="url(#lg-gold)"/>
+    <!-- T stem dark right side -->
+    <rect x="92" y="36" width="6" height="58" rx="0"
+          fill="url(#lg-gold-dark)" opacity="0.4"/>
+    <!-- Highlight on T top-left corner -->
+    <rect x="61" y="37" width="30" height="4" rx="2"
+          fill="rgba(255,235,130,0.5)"/>
+  </g>
 
-  <!-- ── Candlestick 2 (middle, taller) ── -->
-  <rect x="65" y="62" width="10" height="34" rx="1.5" fill="url(#tealGrad)"/>
-  <line x1="70" y1="55" x2="70" y2="62" stroke="#06b6d4" stroke-width="2"/>
-  <line x1="70" y1="96" x2="70" y2="103" stroke="#06b6d4" stroke-width="2"/>
+  <!-- ── TEAL CANDLESTICKS (3 candles, rising left to right) ── -->
+  <g filter="url(#glow-teal)">
+    <!-- Candle 1 — left, shorter -->
+    <line x1="55" y1="80" x2="55" y2="72"  stroke="#5eead4" stroke-width="2"/>
+    <rect x="50" y="80" width="10" height="24" rx="1.5" fill="url(#lg-teal)"/>
+    <line x1="55" y1="104" x2="55" y2="112" stroke="#0891b2" stroke-width="2"/>
 
-  <!-- ── Candlestick 3 (right, tallest) ── -->
-  <rect x="79" y="54" width="10" height="40" rx="1.5" fill="url(#tealGrad)"/>
-  <line x1="84" y1="46" x2="84" y2="54" stroke="#0891b2" stroke-width="2"/>
-  <line x1="84" y1="94" x2="84" y2="102" stroke="#0891b2" stroke-width="2"/>
+    <!-- Candle 2 — middle, taller -->
+    <line x1="70" y1="72" x2="70" y2="63"  stroke="#5eead4" stroke-width="2"/>
+    <rect x="65" y="72" width="10" height="30" rx="1.5" fill="url(#lg-teal)"/>
+    <line x1="70" y1="102" x2="70" y2="110" stroke="#0891b2" stroke-width="2"/>
 
-  <!-- ── Gold "T" arrow (large, behind candles) ── -->
-  <!-- Vertical stem -->
-  <rect x="71" y="30" width="14" height="52" rx="2"
-        fill="url(#goldGrad)" opacity="0.9" filter="url(#goldGlow)"/>
-  <!-- Horizontal top of T -->
-  <rect x="56" y="28" width="44" height="13" rx="2"
-        fill="url(#goldGrad)" opacity="0.9" filter="url(#goldGlow)"/>
+    <!-- Candle 3 — right, tallest -->
+    <line x1="85" y1="66" x2="85" y2="56"  stroke="#5eead4" stroke-width="2"/>
+    <rect x="80" y="66" width="10" height="34" rx="1.5" fill="url(#lg-teal)"/>
+    <line x1="85" y1="100" x2="85" y2="110" stroke="#0891b2" stroke-width="2"/>
 
-  <!-- ═══ TEXT (right side) ═══ -->
+    <!-- Candle highlights -->
+    <rect x="50" y="80" width="4" height="6" rx="1" fill="rgba(200,255,250,0.35)"/>
+    <rect x="65" y="72" width="4" height="7" rx="1" fill="rgba(200,255,250,0.35)"/>
+    <rect x="80" y="66" width="4" height="8" rx="1" fill="rgba(200,255,250,0.35)"/>
+  </g>
 
-  <!-- "One" in blue gradient -->
-  <text x="162" y="82"
+  <!-- ══════════════════════════════════════
+       TEXT — right of icon
+  ══════════════════════════════════════ -->
+
+  <!-- "One" — blue gradient, large bold -->
+  <text x="178" y="98"
         font-family="'Poppins','Arial Black',Arial,sans-serif"
-        font-size="52" font-weight="900"
-        fill="url(#blueGrad)"
-        letter-spacing="-1">One</text>
+        font-size="62" font-weight="900" font-style="normal"
+        fill="url(#lg-one-text)"
+        letter-spacing="-2">One</text>
 
-  <!-- "Trade" in gold -->
-  <text x="278" y="82"
+  <!-- "Trade" — gold gradient, large bold -->
+  <text x="308" y="98"
         font-family="'Poppins','Arial Black',Arial,sans-serif"
-        font-size="52" font-weight="900"
-        fill="url(#goldGrad)"
-        letter-spacing="-1">Trade</text>
+        font-size="62" font-weight="900" font-style="normal"
+        fill="url(#lg-trade-text)"
+        letter-spacing="-2">Trade</text>
 
-  <!-- "TRADE. INVEST. GROW." tagline in cyan -->
-  <text x="163" y="112"
+  <!-- Tagline "TRADE. INVEST. GROW." — cyan, spaced caps -->
+  <text x="180" y="130"
         font-family="'Inter','Segoe UI',Arial,sans-serif"
-        font-size="14" font-weight="700"
-        fill="url(#cyanGrad)"
-        letter-spacing="4">TRADE. INVEST. GROW.</text>
+        font-size="15.5" font-weight="700"
+        fill="url(#lg-tagline)"
+        letter-spacing="4.5">TRADE. INVEST. GROW.</text>
 </svg>

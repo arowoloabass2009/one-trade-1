@@ -40,17 +40,16 @@
 }
 
 .navbar-logo-img {
-  height: 48px;
+  height: 54px;
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
   object-fit: contain;
-  /* Slight glow to make it pop on the dark navbar */
-  filter: drop-shadow(0 0 8px rgba(245,158,11,.25));
+  filter: drop-shadow(0 0 10px rgba(245,158,11,.22));
   transition: filter var(--t-fast);
 }
 
 .navbar-logo:hover .navbar-logo-img {
-  filter: drop-shadow(0 0 14px rgba(245,158,11,.45));
+  filter: drop-shadow(0 0 18px rgba(245,158,11,.55));
 }
 
 /* ─── Nav Links ─── */
