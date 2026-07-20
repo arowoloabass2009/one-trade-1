@@ -36,27 +36,20 @@
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   margin-bottom: 20px;
   text-decoration: none;
 }
 
-.footer-logo-name {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 900;
-  background: var(--grad-gold-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.footer-logo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(245,158,11,.2));
+  transition: filter var(--t-fast);
 }
 
-.footer-logo-tagline {
-  font-size: .62rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--blue-light);
+.footer-logo:hover img {
+  filter: drop-shadow(0 0 14px rgba(245,158,11,.4));
 }
 
 .footer-brand-desc {

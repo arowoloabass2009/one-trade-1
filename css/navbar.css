@@ -35,47 +35,22 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
   text-decoration: none;
 }
 
-.logo-icon {
-  position: relative;
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
+.navbar-logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  /* Slight glow to make it pop on the dark navbar */
+  filter: drop-shadow(0 0 8px rgba(245,158,11,.25));
+  transition: filter var(--t-fast);
 }
 
-.logo-icon svg {
-  width: 46px;
-  height: 46px;
-}
-
-.logo-text-wrap {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logo-name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 900;
-  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d4a017 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: .02em;
-}
-
-.logo-tagline {
-  font-size: .6rem;
-  font-weight: 600;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--blue-light);
-  margin-top: 2px;
+.navbar-logo:hover .navbar-logo-img {
+  filter: drop-shadow(0 0 14px rgba(245,158,11,.45));
 }
 
 /* ─── Nav Links ─── */
@@ -245,5 +220,8 @@
 }
 
 @media (max-width: 480px) {
-  .logo-tagline { display: none; }
+  .navbar-logo-img {
+    height: 38px;
+    max-width: 160px;
+  }
 }
