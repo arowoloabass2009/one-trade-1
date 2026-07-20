@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "One Trade — Premium Forex Investment Platform. Trade. Invest. Grow.",
   "scripts": {
-    "dev": "concurrently --kill-others-on-fail --names \"TS,BS\" --prefix-colors \"yellow,cyan\" \"tsc --watch --preserveWatchOutput\" \"browser-sync start --config bs-config.json\"",
-    "build": "npx tsc",
-    "build:ts": "npx tsc",
-    "start": "browser-sync start --config bs-config.json",
-    "watch": "tsc --watch --preserveWatchOutput",
-    "serve": "browser-sync start --config bs-config.json"
+    "dev":      "concurrently --kill-others-on-fail --names \"TS,BS\" --prefix-colors \"yellow,cyan\" \"tsc --watch --preserveWatchOutput\" \"browser-sync start --config bs-config.json\"",
+    "build":    "tsc --project tsconfig.json",
+    "build:ts": "tsc --project tsconfig.json",
+    "start":    "browser-sync start --config bs-config.json",
+    "watch":    "tsc --watch --preserveWatchOutput",
+    "serve":    "browser-sync start --config bs-config.json"
   },
   "dependencies": {
     "typescript": "5.4.5"
